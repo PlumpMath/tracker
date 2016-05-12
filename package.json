@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/main.js",
     "postversion": "git push && git push --tags",
-    "build-production": "npm run beforebuild && webpack -p --devtool sourcemap"
+    "build-production": "npm run beforebuild && webpack -p --devtool sourcemap",
+    "deploy-surge": "npm run build-production && surge --domain pt-tracker.surge.sh --project ./build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
   "homepage": "https://github.com/presstube/tracker#readme",
   "dependencies": {
     "lodash": "^4.11.1",
-    "react": "^15.0.1"
+    "react": "^15.0.1",
+    "react-dom": "^15.0.2"
   },
   "devDependencies": {
     "babel": "^6.5.2",

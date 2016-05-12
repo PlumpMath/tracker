@@ -1,26 +1,34 @@
 /*
 
-- some way to piggyback a central tick, or update?
-
+- piggyback a central tick, or update?
+  - older versions used a cjs DisplayObjects tick for instance
 */
 
+import _ from "lodash"
 
 export default ({
   subject,
   target,
-  toTrack
+  toTrack,
+  threshold,
+  callback
 }) => {
 
   let interval
 
   const track = () => {
-    console.log("tracking")
     _.each(toTrack, val => {
       const sVal = subject[val]
       const tVal = target[val]
-      subject[val] += (tVal - sVal) / 2
+      const dist = (tVal - sVal) / 2
+      if (Math.abs(dist) <= threshold) {
+        subject[val] = tVal
+      } else {
+        subject[val] += dist
+      }
       console.log(`subject ${val} is now ${subject[val]}`)
     })
+    callback()
   }
 
   const start = () => {

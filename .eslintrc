@@ -87,17 +87,6 @@
         "initialized": "never"
       }
     ],
-    "arrow-parens": [
-      1,
-      "always"
-    ],
-    "arrow-spacing": [
-      1,
-      {
-        "before": true,
-        "after": true
-      }
-    ],
     "space-before-blocks": [
       1,
       "always"
@@ -183,12 +172,6 @@
     ],
     "no-implicit-coercion": [
       2
-    ],
-    "no-param-reassign": [
-      2,
-      {
-        "props": true
-      }
     ],
     "radix": [
       2
