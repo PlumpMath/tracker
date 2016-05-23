@@ -1,7 +1,9 @@
 /*
 
 - piggyback a central tick, or update?
-  - older versions used a cjs DisplayObjects tick for instance
+  - older versions expected their subjects to be DisplayObjects and the CJS 'tick' for instance
+
+
 */
 
 import _ from "lodash"
