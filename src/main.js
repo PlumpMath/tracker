@@ -19,13 +19,40 @@ const target = {
 
 // _.delay(t.stop, 2000)
 
+window.addEventListener("click", (e) => {
+  console.log("window click", e)
+  target.x = e.x
+  target.y = e.y
+
+})
+
 const App = ({
   subject
 })=>{
   const {x, y} = subject
-  return <div>
+  return <div
+    // onClick={()=>console.log('click!')}
+  >
     <div>{x}</div>
     <div>{y}</div>
+    <div
+      style={{
+        position: "absolute",
+        left: x,
+        top: y
+      }}>
+      <div
+        style={{
+          position: "relative",
+          width: 20,
+          height: 20,
+          left: -10,
+          top: -10,
+          borderRadius: "50%",
+          backgroundColor: "red"
+        }}>
+      </div>
+    </div>
   </div>
 }
 
@@ -46,3 +73,10 @@ Object.assign(window, {
   target,
   t
 })
+
+/*
+
+
+
+*/
+

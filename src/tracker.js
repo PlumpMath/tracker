@@ -32,11 +32,14 @@ export default ({
   }
 
   const start = () => {
-    interval = setInterval(track, 30)
+    interval = interval
+      ? interval
+      : setInterval(track, 30)
+    // interval = setInterval(track, 30)
   }
 
   const stop = () => {
-    clearInterval(interval)
+    interval = clearInterval(interval)
   }
 
   start()
