@@ -19,16 +19,16 @@ export default ({
   let interval
 
   const track = () => {
-    _.each(toTrack, val => {
-      const sVal = subject[val]
-      const tVal = target[val]
+    _.each(toTrack, key => {
+      const sVal = subject[key]
+      const tVal = target[key]
       const dist = (tVal - sVal) / 2
       if (Math.abs(dist) <= threshold) {
-        subject[val] = tVal
+        subject[key] = tVal
       } else {
-        subject[val] += dist
+        subject[key] += dist
       }
-      console.log(`subject ${val} is now ${subject[val]}`)
+      console.log(`subject ${key} is now ${subject[key]}`)
     })
     callback()
   }

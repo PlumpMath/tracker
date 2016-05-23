@@ -40,7 +40,7 @@
       1
     ],
     "react/prop-types": [
-      1
+      0
     ],
     "react/no-direct-mutation-state": [
       2
@@ -101,7 +101,7 @@
       }
     ],
     "object-curly-spacing": [
-      1,
+      0,
       "always",
       {
         "objectsInObjects": false,
