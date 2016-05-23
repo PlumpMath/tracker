@@ -31,7 +31,7 @@
       1
     ],
     "react/wrap-multilines": [
-      1
+      0
     ],
     "react/sort-comp": [
       1
@@ -92,7 +92,7 @@
       "always"
     ],
     "array-bracket-spacing": [
-      1,
+      0,
       "always",
       {
         "singleValue": false,

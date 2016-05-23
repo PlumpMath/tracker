@@ -19,8 +19,6 @@ const target = {
 
 // _.delay(t.stop, 2000)
 
-
-
 const App = ({
   subject
 })=>{
@@ -35,11 +33,10 @@ const render = ()=>{
   ReactDOM.render(<App subject={subject}/>, document.getElementById("app"))
 }
 
-
 const t = tracker({
   subject,
   target,
-  toTrack: [ "x", "y" ],
+  tracking: ["x", "y"],
   threshold: 0.01,
   callback: render
 })
